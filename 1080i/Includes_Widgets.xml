@@ -15,6 +15,7 @@
                 <right>view_pad</right>
                 <visible>$PARAM[visible]</visible>
 
+                <!-- Concept UI: Widget row labels with See All link -->
                 <include content="View_Line" condition="$PARAM[labelvisible] + ![$PARAM[usewidgetlabel]]">
                     <param name="label">$PARAM[label]</param>
                     <param name="label_fallback">31282</param>
@@ -23,6 +24,7 @@
                     <param name="visible">!Integer.IsEqual(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating | $PARAM[busy_visible]</param>
                     <param name="use_spinner">true</param>
                     <param name="run_spinner">Container($PARAM[id]).IsUpdating</param>
+                    <param name="show_seeall">true</param>
                 </include>
                 <include content="View_Line" condition="$PARAM[labelvisible] + [$PARAM[usewidgetlabel]]">
                     <param name="label">$INFO[Container($PARAM[id]).ListItem.Property(widget)]</param>
@@ -32,6 +34,7 @@
                     <param name="visible">!Integer.IsEqual(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating | $PARAM[busy_visible]</param>
                     <param name="use_spinner">true</param>
                     <param name="run_spinner">Container($PARAM[id]).IsUpdating</param>
+                    <param name="show_seeall">true</param>
                 </include>
 
                 <include content="Widget_Busy">

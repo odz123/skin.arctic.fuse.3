@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <!-- Concept UI: Rating badges with dark pill background -->
     <include name="Info_Meta_Object">
         <param name="font">font_main</param>
         <param name="colordiffuse">main_fg</param>
         <param name="icon_w">32</param>
         <param name="bordersize">0</param>
         <param name="max_width">680</param>
+        <param name="pill_bg">true</param>
         <definition>
+            <!-- Dark pill background for rating badges -->
+            <control type="group">
+                <visible>$PARAM[visible] + $PARAM[pill_bg]</visible>
+                <centertop>50%</centertop>
+                <height>36</height>
+                <width>1</width>
+                <control type="image">
+                    <left>-8</left>
+                    <top>-2</top>
+                    <bottom>-2</bottom>
+                    <right>-8</right>
+                    <texture colordiffuse="badge_dark" border="18">common/menu.png</texture>
+                </control>
+            </control>
+            <control type="group">
+                <visible>$PARAM[visible] + $PARAM[pill_bg]</visible>
+                <width>6</width>
+            </control>
             <control type="image">
                 <width>$PARAM[icon_w]</width>
                 <height>32</height>
@@ -21,13 +41,17 @@
                 <left>$PARAM[bordersize]</left>
                 <aligny>center</aligny>
                 <label>$PARAM[label]</label>
-                <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                <textcolor>$PARAM[colordiffuse]_90</textcolor>
                 <font>$PARAM[font]</font>
                 <visible>$PARAM[visible]</visible>
                 <width max="$PARAM[max_width]">auto</width>
                 <textoffsetx>0</textoffsetx>
                 <texturefocus />
                 <texturenofocus />
+            </control>
+            <control type="group">
+                <visible>$PARAM[visible] + $PARAM[pill_bg]</visible>
+                <width>6</width>
             </control>
             <control type="group">
                 <visible>$PARAM[visible]</visible>
@@ -263,11 +287,12 @@
         </definition>
     </include>
 
+    <!-- Concept UI: Wider spacing between rating badges -->
     <include name="Info_Meta_Grouplist_Definition">
         <bottom>0</bottom>
         <orientation>horizontal</orientation>
         <height>40</height>
-        <itemgap>12</itemgap>
+        <itemgap>8</itemgap>
         <left>-20</left>
         <control type="group" description="Avoid grouplist chop with spacer">
             <left>-12</left>
@@ -290,12 +315,13 @@
         </definition>
     </include>
 
+    <!-- Concept UI: Pill-box style is now the default display for genre/info tags -->
     <include name="Info_Line_Label">
         <param name="haspath">false</param>
         <param name="dbtype_count">1</param>
         <definition>
             <include content="Info_Line_Divider">
-                <param name="visible">$PARAM[visible] + !Skin.HasSetting(Info.EnablePillboxStyle)</param>
+                <param name="visible">$PARAM[visible] + Skin.HasSetting(Info.DisablePillboxStyle)</param>
             </include>
             <control type="label">
                 <label fallback="$PARAM[label_fallback]">$PARAM[label]</label>
@@ -303,15 +329,15 @@
                 <textcolor>$PARAM[colordiffuse]_70</textcolor>
                 <width>auto</width>
                 <font>font_main</font>
-                <visible>$PARAM[visible] + !Skin.HasSetting(Info.EnablePillboxStyle)</visible>
+                <visible>$PARAM[visible] + Skin.HasSetting(Info.DisablePillboxStyle)</visible>
             </control>
             <control type="button">
                 <label fallback="$PARAM[label_fallback]">$PARAM[label]</label>
-                <texturefocus colordiffuse="main_fg_30" border="8">flags/blank-bordered.png</texturefocus>
-                <texturenofocus colordiffuse="main_fg_30" border="8">flags/blank-bordered.png</texturenofocus>
+                <texturefocus colordiffuse="badge_pill_bg" border="16">common/menu.png</texturefocus>
+                <texturenofocus colordiffuse="badge_pill_bg" border="16">common/menu.png</texturenofocus>
                 <haspath>$PARAM[haspath]</haspath>
                 <width>auto</width>
-                <textoffsetx>10</textoffsetx>
+                <textoffsetx>12</textoffsetx>
                 <textoffsety>info_tag_offset_y</textoffsety>
                 <aligny>top</aligny>
                 <font>font_infotag_bold</font>
@@ -319,7 +345,7 @@
                 <focusedcolor>main_fg_90</focusedcolor>
                 <include>Dimension_Info_Line_Pillbox</include>
                 <shadowcolor>main_bg_12</shadowcolor>
-                <visible>$PARAM[visible] + Skin.HasSetting(Info.EnablePillboxStyle)</visible>
+                <visible>$PARAM[visible] + !Skin.HasSetting(Info.DisablePillboxStyle)</visible>
             </control>
         </definition>
     </include>

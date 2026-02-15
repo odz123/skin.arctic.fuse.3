@@ -402,6 +402,62 @@
         <onleft condition="$EXP[Exp_Hubs_Spotlight_HasItems] + Integer.IsEqual(Container(800).NumItems,0)">Control.Move(301,-1)</onleft>
     </include>
 
+    <!-- Concept UI: Watch Now pill button for spotlight -->
+    <include name="Hub_Spotlight_WatchNow_Button">
+        <param name="id">311</param>
+        <param name="groupid">321</param>
+        <definition>
+            <control type="group" id="$PARAM[groupid]">
+                <width>220</width>
+                <height>56</height>
+                <centertop>50%</centertop>
+                <!-- Unfocused state: light pill -->
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[id])</visible>
+                    <control type="image">
+                        <texture colordiffuse="main_fg_90" border="28">common/menu.png</texture>
+                    </control>
+                    <control type="image">
+                        <width>28</width>
+                        <height>28</height>
+                        <left>20</left>
+                        <centertop>50%</centertop>
+                        <texture colordiffuse="main_bg_100">special://skin/extras/icons/play.png</texture>
+                        <bordersize>-2</bordersize>
+                    </control>
+                </control>
+                <!-- Focused state: highlight pill -->
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[id])</visible>
+                    <control type="image">
+                        <texture colordiffuse="$VAR[ColorHighlight]" border="28">common/menu.png</texture>
+                    </control>
+                    <control type="image">
+                        <width>28</width>
+                        <height>28</height>
+                        <left>20</left>
+                        <centertop>50%</centertop>
+                        <texture colordiffuse="$VAR[ColorSelected]">special://skin/extras/icons/play.png</texture>
+                        <bordersize>-2</bordersize>
+                    </control>
+                </control>
+            </control>
+            <control type="button" id="$PARAM[id]">
+                <width>220</width>
+                <height>56</height>
+                <centertop>50%</centertop>
+                <texturefocus />
+                <texturenofocus />
+                <font>font_main_bold</font>
+                <textoffsetx>54</textoffsetx>
+                <textcolor>main_bg_100</textcolor>
+                <focusedcolor>$VAR[ColorSelected]</focusedcolor>
+                <label>Watch Now</label>
+                <nested />
+            </control>
+        </definition>
+    </include>
+
     <include name="Hub_Spotlight">
         <param name="window">Home</param>
         <param name="visible">True</param>
@@ -455,15 +511,14 @@
                         </include>
                     </control>
 
+                    <!-- Concept UI: Watch Now pill button replacing circle play button -->
                     <control type="group" id="316">
-                        <width>240</width>
+                        <width>320</width>
                         <orientation>horizontal</orientation>
 
-                        <include content="Hub_Spotlight_Button_Circle">
+                        <include content="Hub_Spotlight_WatchNow_Button">
                             <param name="id">311</param>
                             <param name="groupid">321</param>
-                            <param name="label">$VAR[Label_FullscreenWidget_PlayButton]</param>
-                            <param name="image">$VAR[Image_FullscreenWidget_PlayButton]</param>
                             <onclick>SetFocus(301)</onclick>
                             <onclick condition="!String.StartsWith(Container(301).ListItem.FolderPath,videodb://)">Action(select)</onclick>
                             <onclick condition="String.StartsWith(Container(301).ListItem.FolderPath,videodb://)">Action(play)</onclick>
@@ -474,20 +529,21 @@
                             </include>
                             <include>Hub_Spotlight_OnLeft</include>
                             <onright>312</onright>
-                            <left>140</left>
+                            <left>80</left>
                             <onup>300</onup>
                             <ondown>$VAR[Hub_Action_Widgets]</ondown>
                         </include>
                     </control>
 
+                    <!-- Info circle button (smaller, beside Watch Now) -->
                     <include content="Hub_Spotlight_Button_Circle">
                         <param name="id">312</param>
                         <param name="groupid">322</param>
                         <param name="label">$VAR[Label_FullscreenWidget_InfoButton]</param>
                         <param name="image">$VAR[Image_FullscreenWidget_InfoButton]</param>
-                        <param name="size">60</param>
+                        <param name="size">56</param>
                         <param name="bordersize">0</param>
-                        <param name="left">120</param>
+                        <param name="left">40</param>
                         <onclick>SetFocus(301)</onclick>
                         <onclick>$VAR[Action_FullscreenWidget_InfoButton]</onclick>
                         <onclick>SetFocus(312)</onclick>

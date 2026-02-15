@@ -67,6 +67,7 @@
         <param name="run_spinner">false</param>
         <param name="use_subtext">false</param>
         <param name="sub_visible">false</param>
+        <param name="show_seeall">false</param>
         <definition>
 
             <control type="group">
@@ -93,6 +94,17 @@
                         <param name="label_fallback">$PARAM[label_fallback]</param>
                         <param name="visible">$PARAM[run_spinner]</param>
                     </include>
+                    <!-- Concept UI: See All link on right side of widget row label -->
+                    <control type="label">
+                        <visible>$PARAM[show_seeall]</visible>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <right>0</right>
+                        <height>80</height>
+                        <font>font_mini</font>
+                        <textcolor>main_fg_50</textcolor>
+                        <label>See All</label>
+                    </control>
                 </control>
 
                 <control type="grouplist">
