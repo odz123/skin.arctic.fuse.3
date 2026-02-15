@@ -175,7 +175,7 @@
                     <height>30</height>
                     <font>font_mini_bold</font>
                     <textcolor>main_fg_50</textcolor>
-                    <label>CAST &amp; CREW</label>
+                    <label>$LOCALIZE[31990]</label>
                 </control>
                 <!-- Horizontal cast member strip -->
                 <control type="grouplist">

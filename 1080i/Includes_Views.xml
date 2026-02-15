@@ -103,7 +103,7 @@
                         <height>80</height>
                         <font>font_mini</font>
                         <textcolor>main_fg_50</textcolor>
-                        <label>See All</label>
+                        <label>$LOCALIZE[31991]</label>
                     </control>
                 </control>
 

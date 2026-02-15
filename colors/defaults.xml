@@ -64,24 +64,7 @@
     <!-- Misc -->
     <color name="yellow_star">d7ffcd3c</color>
 
-    <!-- Rating Badge Colors (Concept UI) -->
-    <color name="rating_imdb">ffe6b91e</color>
-    <color name="rating_tmdb">ff01b4e4</color>
-    <color name="rating_rt_fresh">fffa320a</color>
-    <color name="rating_rt_rotten">ff569e37</color>
-    <color name="rating_metacritic">ffffcc34</color>
-    <color name="rating_trakt">ffed1c24</color>
-    <color name="rating_mdblist">ff2196f3</color>
-    <color name="rating_letterboxd">ff00e054</color>
-
-    <!-- Concept UI Accent Colors -->
-    <color name="badge_green">ff4caf50</color>
-    <color name="badge_yellow">ffffb300</color>
-    <color name="badge_red">ffef5350</color>
-    <color name="badge_blue">ff42a5f5</color>
-    <color name="badge_dark">b3202020</color>
+    <!-- Concept UI -->
     <color name="badge_pill_bg">33ffffff</color>
-    <color name="watchnow_bg">ffe0e0e0</color>
-    <color name="watchnow_text">ff1a1a1a</color>
 
 </colors>

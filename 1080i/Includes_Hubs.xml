@@ -455,7 +455,7 @@
                 <textoffsetx>54</textoffsetx>
                 <textcolor>main_bg_100</textcolor>
                 <focusedcolor>$VAR[ColorSelected]</focusedcolor>
-                <label>Watch Now</label>
+                <label>$VAR[Label_FullscreenWidget_PlayButton]</label>
                 <nested />
             </control>
         </definition>
