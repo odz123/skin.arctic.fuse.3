@@ -232,7 +232,7 @@
         <control type="image">
             <bottom>0</bottom>
             <height>540</height>
-            <texture colordiffuse="shadow_full">common/white.png</texture>
+            <texture colordiffuse="shadow_full">background/floor.png</texture>
             <visible>[Window.IsVisible(Home) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104)] + $EXP[Hub_Spotlight_Visible_Expression]</visible>
             <include content="Animation_Fade_In">
                 <param name="type">Visible</param>

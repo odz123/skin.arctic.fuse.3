@@ -406,8 +406,10 @@
     <include name="Hub_Spotlight_WatchNow_Button">
         <param name="id">311</param>
         <param name="groupid">321</param>
+        <param name="left">0</param>
         <definition>
             <control type="group" id="$PARAM[groupid]">
+                <left>$PARAM[left]</left>
                 <width>220</width>
                 <height>56</height>
                 <centertop>50%</centertop>
@@ -443,6 +445,7 @@
                 </control>
             </control>
             <control type="button" id="$PARAM[id]">
+                <left>$PARAM[left]</left>
                 <width>220</width>
                 <height>56</height>
                 <centertop>50%</centertop>
@@ -519,6 +522,7 @@
                         <include content="Hub_Spotlight_WatchNow_Button">
                             <param name="id">311</param>
                             <param name="groupid">321</param>
+                            <param name="left">80</param>
                             <onclick>SetFocus(301)</onclick>
                             <onclick condition="!String.StartsWith(Container(301).ListItem.FolderPath,videodb://)">Action(select)</onclick>
                             <onclick condition="String.StartsWith(Container(301).ListItem.FolderPath,videodb://)">Action(play)</onclick>
@@ -529,7 +533,6 @@
                             </include>
                             <include>Hub_Spotlight_OnLeft</include>
                             <onright>312</onright>
-                            <left>80</left>
                             <onup>300</onup>
                             <ondown>$VAR[Hub_Action_Widgets]</ondown>
                         </include>
