@@ -128,7 +128,7 @@
         <item>
             <label>$PARAM[label]</label>
             <label2>$INFO[$PARAM[info]]$PARAM[affix]</label2>
-            <visible>!String.ISEmpty($PARAM[info])</visible>
+            <visible>!String.IsEmpty($PARAM[info])</visible>
             <visible>!String.IsEqual($PARAM[info],$LOCALIZE[13205])</visible>
             <visible>VideoPlayer.Content(livetv)</visible>
         </item>
@@ -138,7 +138,7 @@
         <item>
             <label>$PARAM[label]</label>
             <label2>$INFO[$PARAM[info]]$PARAM[affix]</label2>
-            <visible>!String.ISEmpty($PARAM[info])</visible>
+            <visible>!String.IsEmpty($PARAM[info])</visible>
             <visible>!String.IsEqual($PARAM[info],$LOCALIZE[13205])</visible>
             <visible>!VideoPlayer.Content(livetv)</visible>
         </item>
