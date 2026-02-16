@@ -163,7 +163,7 @@
             <!-- Concept UI: Inline Cast & Crew section with circular photos -->
             <control type="group" description="Cast_Crew_Inline_Section">
                 <left>0</left>
-                <top>400</top>
+                <top>430</top>
                 <height>160</height>
                 <include>DialogInfo_Animation_Left</include>
                 <visible>!String.IsEqual(ListItem.Property(tmdb_type),person) + $EXP[Exp_TMDbHelper_IsData]</visible>
@@ -374,7 +374,7 @@
             </control>
             <control type="grouplist">
                 <left>-40</left>
-                <top>570</top>
+                <top>600</top>
                 <orientation>vertical</orientation>
                 <include>DialogInfo_Animation_Left</include>
                 <include condition="!String.IsEqual(ListItem.Property(tmdb_type),person)">$PARAM[extended_include]</include>
