@@ -548,7 +548,7 @@
 							<description>BAR</description>
 							<centertop>50%</centertop>
 							<info>Player.CacheLevel</info>
-							<include>DefSettingsButton</include>
+
 							<texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
 							<midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
 						</control>
@@ -576,7 +576,7 @@
 							<description>BAR</description>
 							<centertop>50%</centertop>
 							<info>Player.Process(video.queue.level)</info>
-							<include>DefSettingsButton</include>
+
 							<texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
 							<midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
 						</control>
@@ -604,7 +604,7 @@
 							<description>BAR</description>
 							<centertop>50%</centertop>
 							<info>Player.Process(video.queue.data.level)</info>
-							<include>DefSettingsButton</include>
+
 							<texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
 							<midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
 						</control>
@@ -632,7 +632,7 @@
 							<description>BAR</description>
 							<centertop>50%</centertop>
 							<info>Player.Process(audio.queue.level)</info>
-							<include>DefSettingsButton</include>
+
 							<texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
 							<midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
 						</control>
@@ -660,7 +660,7 @@
 							<description>BAR</description>
 							<centertop>50%</centertop>
 							<info>Player.Process(audio.queue.data.level)</info>
-							<include>DefSettingsButton</include>
+
 							<texturebg colordiffuse="panel_fg_12" border="6">progress/progress-bg.png</texturebg>
 							<midtexture colordiffuse="dialog_fg_90" border="6">progress/progress-bg.png</midtexture>
 						</control>

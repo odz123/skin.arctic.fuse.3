@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <expression name="Image_Clearlogo_Title_IsVisible_Expression">[[$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.CropImage))] | [$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.Current.CropImage)) + $EXP | [Exp_InfoDialogs]] | [!String.IsEmpty(ListITem.Art(clearlogo))] | [!String.IsEmpty(ListITem.Art(tvshow.clearlogo))] | [!String.IsEmpty(ListITem.Art(artist.clearlogo))]]</expression>
+    <expression name="Image_Clearlogo_Title_IsVisible_Expression">[[$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.CropImage))] | [$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.CropImage)) + $EXP[Exp_InfoDialogs]] | [!String.IsEmpty(ListItem.Art(clearlogo))] | [!String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | [!String.IsEmpty(ListItem.Art(artist.clearlogo))]]</expression>
 
     <variable name="Image_Clearlogo_Title">
-        <value condition="$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.CropImage))">$INFO[Window(Home).Property(TMDbHelper.ListITem.CropImage)]</value>
-        <value condition="$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListITem.Current.CropImage)) + $EXP[Exp_InfoDialogs]">$INFO[Window(Home).Property(TMDbHelper.ListITem.Current.CropImage)]</value>
-        <value condition="!String.IsEmpty(ListITem.Art(clearlogo))">$INFO[ListITem.Art(clearlogo)]</value>
-        <value condition="!String.IsEmpty(ListITem.Art(tvshow.clearlogo))">$INFO[ListITem.Art(tvshow.clearlogo)]</value>
-        <value condition="!String.IsEmpty(ListITem.Art(artist.clearlogo))">$INFO[ListITem.Art(artist.clearlogo)]</value>
+        <value condition="$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.CropImage))">$INFO[Window(Home).Property(TMDbHelper.ListItem.CropImage)]</value>
+        <value condition="$EXP[Exp_TMDbHelper_IsData] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Current.CropImage)) + $EXP[Exp_InfoDialogs]">$INFO[Window(Home).Property(TMDbHelper.ListItem.Current.CropImage)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(artist.clearlogo))">$INFO[ListItem.Art(artist.clearlogo)]</value>
     </variable>
 
     <variable name="Image_Overlay_Poster">
@@ -37,7 +37,7 @@
     </variable>
 
     <variable name="Image_1114_Poster">
-        <value condition="Control.HasFocus(7001) + String.IsEqual(Container(7001).ListITem.Property(tmdb_type),person)">$INFO[Container(7001).ListItem.Art(thumb)]</value>
+        <value condition="Control.HasFocus(7001) + String.IsEqual(Container(7001).ListItem.Property(tmdb_type),person)">$INFO[Container(7001).ListItem.Art(thumb)]</value>
         <value condition="Control.HasFocus(7001)">$INFO[Container(7001).ListItem.Art(poster)]</value>
         <value>$INFO[Window.Property(poster)]</value>
     </variable>

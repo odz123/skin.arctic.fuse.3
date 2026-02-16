@@ -1835,7 +1835,7 @@
                         <texturenofocus colordiffuse="main_fg_12" border="24">common/menu.png</texturenofocus>
                         <texturefocus colordiffuse="$VAR[ColorHighlight]" border="24">common/menu.png</texturefocus>
                         <label>$LOCALIZE[33063]</label>
-                        <onclick>SetProperty(Dialog.1172.DBTYPE,$INFO[ListITem.DBTYpe],Home)</onclick>
+                        <onclick>SetProperty(Dialog.1172.DBTYPE,$INFO[ListItem.DBType],Home)</onclick>
                         <onclick>ActivateWindow(1172)</onclick>
                     </control>
 
