@@ -637,8 +637,8 @@
                     <param name="condition">[!ControlGroup(310).HasFocus() | System.IdleTime(3)]</param>
                 </include>
 
-                <itemlayout />
-                <focusedlayout />
+                <itemlayout width="1" height="1" />
+                <focusedlayout width="1" height="1" />
 
                 <include content="Object_ContentDynamic">
                     <param name="sortby">$PARAM[sortby]</param>

@@ -14,8 +14,8 @@
             <onclick>Weather.LocationNext</onclick>
             <onup>601</onup>
             <onfocus>SetFocus(601)</onfocus>
-            <itemlayout />
-            <focusedlayout />
+            <itemlayout width="1" height="1" />
+            <focusedlayout width="1" height="1" />
             <content sortby="random" target="images">resource://resource.images.weatherfanart.multi/$INFO[Weather.FanartCode]/</content>
         </control>
 
