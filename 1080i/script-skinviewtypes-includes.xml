@@ -3,4 +3,63 @@
     <include name="Action_BuildViews">
         <onload>RunScript(script.skinvariables,action=buildviews)</onload>
     </include>
+
+    <!-- Stub expressions for view types. These are normally generated at runtime
+         by script.skinvariables based on skinviewtypes.json. On first skin activation
+         the script hasn't run yet, so we provide defaults to prevent crashes from
+         undefined $EXP[] references. script.skinvariables will overwrite this file. -->
+
+    <!-- Row Views -->
+    <expression name="Exp_View_500">[Integer.IsEqual(Container.ViewMode,500)]</expression>
+    <expression name="Exp_View_500_Include">[Integer.IsEqual(Container.ViewMode,500)]</expression>
+    <expression name="Exp_View_501">[Integer.IsEqual(Container.ViewMode,501)]</expression>
+    <expression name="Exp_View_501_Include">[Integer.IsEqual(Container.ViewMode,501)]</expression>
+    <expression name="Exp_View_502">[Integer.IsEqual(Container.ViewMode,502)]</expression>
+    <expression name="Exp_View_502_Include">[Integer.IsEqual(Container.ViewMode,502)]</expression>
+    <expression name="Exp_View_503">[Integer.IsEqual(Container.ViewMode,503)]</expression>
+    <expression name="Exp_View_503_Include">[Integer.IsEqual(Container.ViewMode,503)]</expression>
+    <expression name="Exp_View_504">[Integer.IsEqual(Container.ViewMode,504)]</expression>
+    <expression name="Exp_View_504_Include">[Integer.IsEqual(Container.ViewMode,504)]</expression>
+    <expression name="Exp_View_505">[Integer.IsEqual(Container.ViewMode,505)]</expression>
+    <expression name="Exp_View_505_Include">[Integer.IsEqual(Container.ViewMode,505)]</expression>
+
+    <!-- List Views -->
+    <expression name="Exp_View_506">[Integer.IsEqual(Container.ViewMode,506)]</expression>
+    <expression name="Exp_View_506_Include">[Integer.IsEqual(Container.ViewMode,506)]</expression>
+    <expression name="Exp_View_507">[Integer.IsEqual(Container.ViewMode,507)]</expression>
+    <expression name="Exp_View_507_Include">[Integer.IsEqual(Container.ViewMode,507)]</expression>
+    <expression name="Exp_View_508">[Integer.IsEqual(Container.ViewMode,508)]</expression>
+    <expression name="Exp_View_508_Include">[Integer.IsEqual(Container.ViewMode,508)]</expression>
+    <expression name="Exp_View_509">[Integer.IsEqual(Container.ViewMode,509)]</expression>
+    <expression name="Exp_View_509_Include">[Integer.IsEqual(Container.ViewMode,509)]</expression>
+    <expression name="Exp_View_549">[Integer.IsEqual(Container.ViewMode,549)]</expression>
+    <expression name="Exp_View_549_Include">[Integer.IsEqual(Container.ViewMode,549)]</expression>
+
+    <!-- Wall Views -->
+    <expression name="Exp_View_510">[Integer.IsEqual(Container.ViewMode,510)]</expression>
+    <expression name="Exp_View_510_Include">[Integer.IsEqual(Container.ViewMode,510)]</expression>
+    <expression name="Exp_View_511">[Integer.IsEqual(Container.ViewMode,511)]</expression>
+    <expression name="Exp_View_511_Include">[Integer.IsEqual(Container.ViewMode,511)]</expression>
+    <expression name="Exp_View_512">[Integer.IsEqual(Container.ViewMode,512)]</expression>
+    <expression name="Exp_View_512_Include">[Integer.IsEqual(Container.ViewMode,512)]</expression>
+    <expression name="Exp_View_513">[Integer.IsEqual(Container.ViewMode,513)]</expression>
+    <expression name="Exp_View_513_Include">[Integer.IsEqual(Container.ViewMode,513)]</expression>
+    <expression name="Exp_View_514">[Integer.IsEqual(Container.ViewMode,514)]</expression>
+    <expression name="Exp_View_514_Include">[Integer.IsEqual(Container.ViewMode,514)]</expression>
+
+    <!-- Combined Views -->
+    <expression name="Exp_View_520">[Integer.IsEqual(Container.ViewMode,520)]</expression>
+    <expression name="Exp_View_520_Include">[Integer.IsEqual(Container.ViewMode,520)]</expression>
+    <expression name="Exp_View_521">[Integer.IsEqual(Container.ViewMode,521)]</expression>
+    <expression name="Exp_View_521_Include">[Integer.IsEqual(Container.ViewMode,521)]</expression>
+    <expression name="Exp_View_522">[Integer.IsEqual(Container.ViewMode,522)]</expression>
+    <expression name="Exp_View_522_Include">[Integer.IsEqual(Container.ViewMode,522)]</expression>
+    <expression name="Exp_View_523">[Integer.IsEqual(Container.ViewMode,523)]</expression>
+    <expression name="Exp_View_523_Include">[Integer.IsEqual(Container.ViewMode,523)]</expression>
+    <expression name="Exp_View_524">[Integer.IsEqual(Container.ViewMode,524)]</expression>
+    <expression name="Exp_View_524_Include">[Integer.IsEqual(Container.ViewMode,524)]</expression>
+    <expression name="Exp_View_526">[Integer.IsEqual(Container.ViewMode,526)]</expression>
+    <expression name="Exp_View_526_Include">[Integer.IsEqual(Container.ViewMode,526)]</expression>
+    <expression name="Exp_View_528">[Integer.IsEqual(Container.ViewMode,528)]</expression>
+    <expression name="Exp_View_528_Include">[Integer.IsEqual(Container.ViewMode,528)]</expression>
 </includes>
