@@ -12,3 +12,4 @@ addon.xml merge=ours
 *.wav binary
 *.mp3 binary
 *.xbt binary
+*.zip binary
