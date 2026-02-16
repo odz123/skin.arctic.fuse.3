@@ -372,10 +372,21 @@
                     </control>
                 </control>
             </control>
+            <!-- Extended content: after cast section when cast is visible -->
             <control type="grouplist">
                 <left>-40</left>
                 <top>600</top>
                 <orientation>vertical</orientation>
+                <visible>$EXP[Exp_TMDbHelper_IsData] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+                <include>DialogInfo_Animation_Left</include>
+                <include condition="!String.IsEqual(ListItem.Property(tmdb_type),person)">$PARAM[extended_include]</include>
+            </control>
+            <!-- Extended content: original position when cast section is hidden -->
+            <control type="grouplist">
+                <left>-40</left>
+                <top>400</top>
+                <orientation>vertical</orientation>
+                <visible>![$EXP[Exp_TMDbHelper_IsData] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]]</visible>
                 <include>DialogInfo_Animation_Left</include>
                 <include condition="!String.IsEqual(ListItem.Property(tmdb_type),person)">$PARAM[extended_include]</include>
             </control>

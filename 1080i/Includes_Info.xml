@@ -866,7 +866,7 @@
                 <width>155</width>
                 <include>Dimension_Info_Line_Pillbox</include>
                 <control type="image">
-                    <texture colordiffuse="main_fg_30" border="8">flags/blank-bordered.png</texture>
+                    <texture colordiffuse="badge_pill_bg" border="16">common/menu.png</texture>
                 </control>
                 <include content="Info_StarRating">
                     <param name="colordiffuse">$PARAM[colordiffuse]</param>
