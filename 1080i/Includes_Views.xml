@@ -293,6 +293,30 @@
         </definition>
     </include>
 
+    <include name="View_Furniture_Scrollbar_V">
+        <param name="visible">true</param>
+        <definition>
+            <control type="group">
+                <visible>$PARAM[visible]</visible>
+                <centerright>40</centerright>
+                <width>scrollbar_w</width>
+                <height>$PARAM[height]</height>
+                <control type="image">
+                    <width>1</width>
+                    <centerleft>50%</centerleft>
+                    <texture colordiffuse="main_fg_12">common/white.png</texture>
+                </control>
+                <control type="scrollbar" id="$PARAM[id]">
+                    <orientation>vertical</orientation>
+                    <texturesliderbackground />
+                    <include>Texture_Scrollbar_SliderBar_V</include>
+                    <include>Texture_Scrollbar_V</include>
+                    <showonepage>true</showonepage>
+                </control>
+            </control>
+        </definition>
+    </include>
+
     <variable name="View_ContentID">
         <value condition="Control.IsVisible(500)">500</value>
         <value condition="Control.IsVisible(501)">501</value>

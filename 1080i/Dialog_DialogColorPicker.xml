@@ -414,7 +414,7 @@
                 <top>-30</top>
                 <width>140</width>
                 <height>140</height>
-                <visible>Control.Hasfocus($PARAM[id])</visible>
+                <visible>Control.HasFocus($PARAM[id])</visible>
                 <animation effect="slide" end="0,80" condition="Container($PARAM[id]).Row(1)">Conditional</animation>
                 <animation effect="slide" end="0,160" condition="Container($PARAM[id]).Row(2)">Conditional</animation>
                 <animation effect="slide" end="0,240" condition="Container($PARAM[id]).Row(3)">Conditional</animation>

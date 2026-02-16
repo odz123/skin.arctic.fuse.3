@@ -2,7 +2,7 @@
 <includes>
 
     <variable name="DialogContextMenu_HeaderLabel">
-        <value condition="!String.ISEmpty(Window(Home).Property(TMDbHelper.ListItem.base_label)) + $EXP[Exp_AllowExpandedContextMenu]">$INFO[Window(Home).Property(TMDbHelper.ListItem.base_label)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.base_label)) + $EXP[Exp_AllowExpandedContextMenu]">$INFO[Window(Home).Property(TMDbHelper.ListItem.base_label)]</value>
         <value>$LOCALIZE[10106]</value>
     </variable>
 
