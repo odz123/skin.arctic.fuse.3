@@ -20,8 +20,8 @@
             <content sortby="random">$VAR[Defs_ScreensaverWidget]</content>
             <autoscroll time="20000">true</autoscroll>
             <orientation>horizontal</orientation>
-            <itemlayout />
-            <focusedlayout />
+            <itemlayout width="1" height="1" />
+            <focusedlayout width="1" height="1" />
         </control>
 
         <control type="image">
