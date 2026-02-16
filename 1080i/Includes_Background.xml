@@ -228,6 +228,19 @@
                 <param name="type">Hidden</param>
             </include>
         </control>
+        <!-- Concept UI: Stronger bottom gradient for better text readability over fanart -->
+        <control type="image">
+            <bottom>0</bottom>
+            <height>540</height>
+            <texture colordiffuse="shadow_full">background/floor.png</texture>
+            <visible>[Window.IsVisible(Home) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104)] + $EXP[Hub_Spotlight_Visible_Expression]</visible>
+            <include content="Animation_Fade_In">
+                <param name="type">Visible</param>
+            </include>
+            <include content="Animation_Fade_Out">
+                <param name="type">Hidden</param>
+            </include>
+        </control>
     </include>
 
     <include name="Background_HolidayTheme_FrostOverlay">

@@ -21,7 +21,7 @@
                 <left>$PARAM[bordersize]</left>
                 <aligny>center</aligny>
                 <label>$PARAM[label]</label>
-                <textcolor>$PARAM[colordiffuse]_70</textcolor>
+                <textcolor>$PARAM[colordiffuse]_90</textcolor>
                 <font>$PARAM[font]</font>
                 <visible>$PARAM[visible]</visible>
                 <width max="$PARAM[max_width]">auto</width>
@@ -290,6 +290,7 @@
         </definition>
     </include>
 
+    <!-- Concept UI: Rounded pill style for genre/info tags -->
     <include name="Info_Line_Label">
         <param name="haspath">false</param>
         <param name="dbtype_count">1</param>
@@ -307,11 +308,11 @@
             </control>
             <control type="button">
                 <label fallback="$PARAM[label_fallback]">$PARAM[label]</label>
-                <texturefocus colordiffuse="main_fg_30" border="8">flags/blank-bordered.png</texturefocus>
-                <texturenofocus colordiffuse="main_fg_30" border="8">flags/blank-bordered.png</texturenofocus>
+                <texturefocus colordiffuse="badge_pill_bg" border="16">common/menu.png</texturefocus>
+                <texturenofocus colordiffuse="badge_pill_bg" border="16">common/menu.png</texturenofocus>
                 <haspath>$PARAM[haspath]</haspath>
                 <width>auto</width>
-                <textoffsetx>10</textoffsetx>
+                <textoffsetx>12</textoffsetx>
                 <textoffsety>info_tag_offset_y</textoffsety>
                 <aligny>top</aligny>
                 <font>font_infotag_bold</font>
@@ -865,7 +866,7 @@
                 <width>155</width>
                 <include>Dimension_Info_Line_Pillbox</include>
                 <control type="image">
-                    <texture colordiffuse="main_fg_30" border="8">flags/blank-bordered.png</texture>
+                    <texture colordiffuse="badge_pill_bg" border="16">common/menu.png</texture>
                 </control>
                 <include content="Info_StarRating">
                     <param name="colordiffuse">$PARAM[colordiffuse]</param>

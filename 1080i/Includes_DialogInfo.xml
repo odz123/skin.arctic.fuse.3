@@ -160,10 +160,233 @@
                     <param name="include_title">false</param>
                 </include>
             </control>
+            <!-- Concept UI: Inline Cast & Crew section with circular photos -->
+            <control type="group" description="Cast_Crew_Inline_Section">
+                <left>0</left>
+                <top>430</top>
+                <height>160</height>
+                <include>DialogInfo_Animation_Left</include>
+                <visible>!String.IsEqual(ListItem.Property(tmdb_type),person) + $EXP[Exp_TMDbHelper_IsData]</visible>
+                <visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+                <!-- Section heading -->
+                <control type="label">
+                    <left>0</left>
+                    <top>0</top>
+                    <height>30</height>
+                    <font>font_mini_bold</font>
+                    <textcolor>main_fg_50</textcolor>
+                    <label>$LOCALIZE[31990]</label>
+                </control>
+                <!-- Horizontal cast member strip -->
+                <control type="grouplist">
+                    <orientation>horizontal</orientation>
+                    <top>36</top>
+                    <height>120</height>
+                    <itemgap>20</itemgap>
+                    <hitrect x="0" y="0" w="0" h="0" />
+                    <!-- Cast member 1 -->
+                    <control type="group">
+                        <width>90</width>
+                        <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Cast.1.Name))</visible>
+                        <control type="image">
+                            <width>70</width>
+                            <height>70</height>
+                            <left>10</left>
+                            <top>0</top>
+                            <texture background="true" fallback="fallback/no-image-actor.png" diffuse="diffuse/circle/circle_120.png">$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.1.Thumb)]</texture>
+                            <aspectratio aligny="top" align="center">scale</aspectratio>
+                        </control>
+                        <control type="label">
+                            <top>74</top>
+                            <height>20</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_tiny</font>
+                            <textcolor>main_fg_90</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.1.Name)]</label>
+                        </control>
+                        <control type="label">
+                            <top>92</top>
+                            <height>18</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_hint</font>
+                            <textcolor>main_fg_50</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.1.Role)]</label>
+                        </control>
+                    </control>
+                    <!-- Cast member 2 -->
+                    <control type="group">
+                        <width>90</width>
+                        <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Cast.2.Name))</visible>
+                        <control type="image">
+                            <width>70</width>
+                            <height>70</height>
+                            <left>10</left>
+                            <top>0</top>
+                            <texture background="true" fallback="fallback/no-image-actor.png" diffuse="diffuse/circle/circle_120.png">$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.2.Thumb)]</texture>
+                            <aspectratio aligny="top" align="center">scale</aspectratio>
+                        </control>
+                        <control type="label">
+                            <top>74</top>
+                            <height>20</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_tiny</font>
+                            <textcolor>main_fg_90</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.2.Name)]</label>
+                        </control>
+                        <control type="label">
+                            <top>92</top>
+                            <height>18</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_hint</font>
+                            <textcolor>main_fg_50</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.2.Role)]</label>
+                        </control>
+                    </control>
+                    <!-- Cast member 3 -->
+                    <control type="group">
+                        <width>90</width>
+                        <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Cast.3.Name))</visible>
+                        <control type="image">
+                            <width>70</width>
+                            <height>70</height>
+                            <left>10</left>
+                            <top>0</top>
+                            <texture background="true" fallback="fallback/no-image-actor.png" diffuse="diffuse/circle/circle_120.png">$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.3.Thumb)]</texture>
+                            <aspectratio aligny="top" align="center">scale</aspectratio>
+                        </control>
+                        <control type="label">
+                            <top>74</top>
+                            <height>20</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_tiny</font>
+                            <textcolor>main_fg_90</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.3.Name)]</label>
+                        </control>
+                        <control type="label">
+                            <top>92</top>
+                            <height>18</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_hint</font>
+                            <textcolor>main_fg_50</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.3.Role)]</label>
+                        </control>
+                    </control>
+                    <!-- Cast member 4 -->
+                    <control type="group">
+                        <width>90</width>
+                        <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Cast.4.Name))</visible>
+                        <control type="image">
+                            <width>70</width>
+                            <height>70</height>
+                            <left>10</left>
+                            <top>0</top>
+                            <texture background="true" fallback="fallback/no-image-actor.png" diffuse="diffuse/circle/circle_120.png">$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.4.Thumb)]</texture>
+                            <aspectratio aligny="top" align="center">scale</aspectratio>
+                        </control>
+                        <control type="label">
+                            <top>74</top>
+                            <height>20</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_tiny</font>
+                            <textcolor>main_fg_90</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.4.Name)]</label>
+                        </control>
+                        <control type="label">
+                            <top>92</top>
+                            <height>18</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_hint</font>
+                            <textcolor>main_fg_50</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.4.Role)]</label>
+                        </control>
+                    </control>
+                    <!-- Cast member 5 -->
+                    <control type="group">
+                        <width>90</width>
+                        <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Cast.5.Name))</visible>
+                        <control type="image">
+                            <width>70</width>
+                            <height>70</height>
+                            <left>10</left>
+                            <top>0</top>
+                            <texture background="true" fallback="fallback/no-image-actor.png" diffuse="diffuse/circle/circle_120.png">$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.5.Thumb)]</texture>
+                            <aspectratio aligny="top" align="center">scale</aspectratio>
+                        </control>
+                        <control type="label">
+                            <top>74</top>
+                            <height>20</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_tiny</font>
+                            <textcolor>main_fg_90</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.5.Name)]</label>
+                        </control>
+                        <control type="label">
+                            <top>92</top>
+                            <height>18</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_hint</font>
+                            <textcolor>main_fg_50</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.5.Role)]</label>
+                        </control>
+                    </control>
+                    <!-- Cast member 6 -->
+                    <control type="group">
+                        <width>90</width>
+                        <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Cast.6.Name))</visible>
+                        <control type="image">
+                            <width>70</width>
+                            <height>70</height>
+                            <left>10</left>
+                            <top>0</top>
+                            <texture background="true" fallback="fallback/no-image-actor.png" diffuse="diffuse/circle/circle_120.png">$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.6.Thumb)]</texture>
+                            <aspectratio aligny="top" align="center">scale</aspectratio>
+                        </control>
+                        <control type="label">
+                            <top>74</top>
+                            <height>20</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_tiny</font>
+                            <textcolor>main_fg_90</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.6.Name)]</label>
+                        </control>
+                        <control type="label">
+                            <top>92</top>
+                            <height>18</height>
+                            <width>90</width>
+                            <align>center</align>
+                            <font>font_hint</font>
+                            <textcolor>main_fg_50</textcolor>
+                            <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Cast.6.Role)]</label>
+                        </control>
+                    </control>
+                </control>
+            </control>
+            <!-- Extended content: after cast section when cast is visible -->
+            <control type="grouplist">
+                <left>-40</left>
+                <top>600</top>
+                <orientation>vertical</orientation>
+                <visible>$EXP[Exp_TMDbHelper_IsData] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
+                <include>DialogInfo_Animation_Left</include>
+                <include condition="!String.IsEqual(ListItem.Property(tmdb_type),person)">$PARAM[extended_include]</include>
+            </control>
+            <!-- Extended content: original position when cast section is hidden -->
             <control type="grouplist">
                 <left>-40</left>
                 <top>400</top>
                 <orientation>vertical</orientation>
+                <visible>![$EXP[Exp_TMDbHelper_IsData] + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]]</visible>
                 <include>DialogInfo_Animation_Left</include>
                 <include condition="!String.IsEqual(ListItem.Property(tmdb_type),person)">$PARAM[extended_include]</include>
             </control>
@@ -1521,64 +1744,100 @@
                     <param name="left">20</param>
                     <param name="label" />
                 </include>
+                <!-- Concept UI: Pill-style action buttons -->
                 <control type="grouplist" id="9000">
                     <orientation>horizontal</orientation>
                     <top>-2</top>
                     <left>20</left>
                     <height>57</height>
-                    <itemgap>40</itemgap>
+                    <itemgap>16</itemgap>
                     <ondown>90001</ondown>
                     <onup condition="$EXP[Exp_TMDbHelper_IsData]">ActivateWindow(1113)</onup>
 
-                    <!-- Play/Browse -->
-                    <include content="Button_Underline_Switcher">
-                        <param name="id">4001</param>
-                        <param name="control">button</param>
+                    <!-- Play/Browse - Primary pill button -->
+                    <control type="button" id="4001">
+                        <width min="120">auto</width>
+                        <height>48</height>
+                        <centertop>50%</centertop>
+                        <font>font_main_bold</font>
+                        <textoffsetx>20</textoffsetx>
+                        <textcolor>main_bg_100</textcolor>
+                        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
+                        <texturenofocus colordiffuse="main_fg_90" border="24">common/menu.png</texturenofocus>
+                        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="24">common/menu.png</texturefocus>
                         <label>$VAR[Label_DialogInfo_PlayButton]</label>
                         <onclick>$VAR[Action_DialogInfo_PlayMedia]</onclick>
-                    </include>
+                    </control>
 
-                    <!-- Button 0 -->
-                    <include content="Button_Underline_Switcher">
-                        <param name="id">4002</param>
-                        <param name="control">button</param>
+                    <!-- Button 0 - Secondary pill button -->
+                    <control type="button" id="4002">
+                        <width min="100">auto</width>
+                        <height>48</height>
+                        <centertop>50%</centertop>
+                        <font>font_main_bold</font>
+                        <textoffsetx>18</textoffsetx>
+                        <textcolor>main_fg_70</textcolor>
+                        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
+                        <texturenofocus colordiffuse="badge_pill_bg" border="24">common/menu.png</texturenofocus>
+                        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="24">common/menu.png</texturefocus>
                         <label>$INFO[Container(4900).ListItemAbsolute(0).Label]</label>
                         <onclick>SetFocus(4900,0,absolute)</onclick>
                         <onclick>Action(select)</onclick>
                         <onclick>SetFocus(4002)</onclick>
                         <visible>!String.IsEmpty(Container(4900).ListItemAbsolute(0).Label)</visible>
-                    </include>
+                    </control>
 
-                    <!-- Button 1 -->
-                    <include content="Button_Underline_Switcher">
-                        <param name="id">4003</param>
-                        <param name="control">button</param>
+                    <!-- Button 1 - Secondary pill button -->
+                    <control type="button" id="4003">
+                        <width min="100">auto</width>
+                        <height>48</height>
+                        <centertop>50%</centertop>
+                        <font>font_main_bold</font>
+                        <textoffsetx>18</textoffsetx>
+                        <textcolor>main_fg_70</textcolor>
+                        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
+                        <texturenofocus colordiffuse="badge_pill_bg" border="24">common/menu.png</texturenofocus>
+                        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="24">common/menu.png</texturefocus>
                         <label>$INFO[Container(4900).ListItemAbsolute(1).Label]</label>
                         <onclick>SetFocus(4900,1,absolute)</onclick>
                         <onclick>Action(select)</onclick>
                         <onclick>SetFocus(4003)</onclick>
                         <visible>!String.IsEmpty(Container(4900).ListItemAbsolute(1).Label)</visible>
-                    </include>
+                    </control>
 
-                    <!-- Button 2 -->
-                    <include content="Button_Underline_Switcher">
-                        <param name="id">4004</param>
-                        <param name="control">button</param>
+                    <!-- Button 2 - Secondary pill button -->
+                    <control type="button" id="4004">
+                        <width min="100">auto</width>
+                        <height>48</height>
+                        <centertop>50%</centertop>
+                        <font>font_main_bold</font>
+                        <textoffsetx>18</textoffsetx>
+                        <textcolor>main_fg_70</textcolor>
+                        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
+                        <texturenofocus colordiffuse="badge_pill_bg" border="24">common/menu.png</texturenofocus>
+                        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="24">common/menu.png</texturefocus>
                         <label>$INFO[Container(4900).ListItemAbsolute(2).Label]</label>
                         <onclick>SetFocus(4900,2,absolute)</onclick>
                         <onclick>Action(select)</onclick>
                         <onclick>SetFocus(4004)</onclick>
                         <visible>!String.IsEmpty(Container(4900).ListItemAbsolute(2).Label)</visible>
-                    </include>
+                    </control>
 
-                    <!-- Options -->
-                    <include content="Button_Underline_Switcher">
-                        <param name="id">4005</param>
-                        <param name="control">button</param>
+                    <!-- Options - Tertiary pill button -->
+                    <control type="button" id="4005">
+                        <width min="100">auto</width>
+                        <height>48</height>
+                        <centertop>50%</centertop>
+                        <font>font_main_bold</font>
+                        <textoffsetx>18</textoffsetx>
+                        <textcolor>main_fg_50</textcolor>
+                        <focusedcolor>$VAR[ColorSelected]</focusedcolor>
+                        <texturenofocus colordiffuse="main_fg_12" border="24">common/menu.png</texturenofocus>
+                        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="24">common/menu.png</texturefocus>
                         <label>$LOCALIZE[33063]</label>
                         <onclick>SetProperty(Dialog.1172.DBTYPE,$INFO[ListITem.DBTYpe],Home)</onclick>
                         <onclick>ActivateWindow(1172)</onclick>
-                    </include>
+                    </control>
 
                 </control>
             </control>

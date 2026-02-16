@@ -35,9 +35,10 @@
     </variable>
 
     <!-- Watched / Progress Color -->
+    <!-- Concept UI: Brighter green for watched indicators -->
     <variable name="ColorWatchedProgress">
         <value condition="!String.IsEmpty(Skin.String(watchedprogresscolor.name))">$INFO[Skin.String(watchedprogresscolor.name)]</value>
-        <value>ff03b585</value>
+        <value>ff4caf50</value>
     </variable>
 
     <!-- Mouse Pointer -->
