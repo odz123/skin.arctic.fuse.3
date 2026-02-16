@@ -183,8 +183,8 @@
             <top>-2000</top>
             <height>10</height>
             <orientation>horizontal</orientation>
-            <itemlayout width="1" />
-            <focusedlayout width="1" />
+            <itemlayout width="1" height="1" />
+            <focusedlayout width="1" height="1" />
             <content>
                 <include content="Home_ControlList_Items">
                     <param name="mod" />
