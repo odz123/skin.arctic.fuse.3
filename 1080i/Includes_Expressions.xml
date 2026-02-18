@@ -141,6 +141,4 @@
 
     <expression name="Exp_Christmas_Theme">[Skin.HasSetting(EnableHolidayTheme) + [[!Window.IsVisible(visualisation) + !VideoPlayer.IsFullscreen] | Window.IsActive(fullscreeninfo)]]</expression>
 
-    <expression name="Exp_Halloween_Theme">[Skin.HasSetting(EnableHolidayTheme) + [[!Window.IsVisible(visualisation) + !VideoPlayer.IsFullscreen] | Window.IsActive(fullscreeninfo)]]</expression>
-
 </includes>
